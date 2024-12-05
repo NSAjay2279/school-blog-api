@@ -1,6 +1,8 @@
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+from dotenv import load_dotenv
+load_dotenv()
 
 uri = "mongodb+srv://negisinghajayus:Firstapp@pymongo.3xdtt.mongodb.net/?retryWrites=true&w=majority&appName=Pymongo"
 
