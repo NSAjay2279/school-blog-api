@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.config import get_mongo_client
 from app.routes import router
+from app.config import get_mongo_client
 
 app = FastAPI()
 
