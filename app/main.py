@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from pymongo import MongoClient
 from app.routes import router
+from config import client
+
+# Use the client object for your CRUD operations on the database
 
 app = FastAPI()
 
