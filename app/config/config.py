@@ -8,6 +8,10 @@ uri = "mongodb+srv://negisinghajayus:Firstapp@pymongo.3xdtt.mongodb.net/?retryWr
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
 
+db = client.schoolBlogs
+
+blogsCollection = db['Blogs']
+usersCollection = db['users']
 # Send a ping to confirm a successful connection
 try:
   client.admin.command('ping')
