@@ -1,14 +1,11 @@
 from fastapi import FastAPI
-from pymongo import MongoClient
+from app.config import get_mongo_client
 from app.routes import router
-from config import client
-
-# Use the client object for your CRUD operations on the database
 
 app = FastAPI()
 
-# Replace with your actual MongoDB connection string
-client = MongoClient("mongodb://localhost:27017/")
-db = client["your_database_name"]
+# Get the MongoDB client
+client = get_mongo_client()
+db = client["your_database_name"]  # Replace with your database name
 
 app.include_router(router)
